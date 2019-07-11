@@ -5,15 +5,13 @@ struct TV {
 	int si,ei;
 }tv[110];
 bool cmp(TV a,TV b) {
-	if(a.ei != b.ei) return a.ei > b.ei;
-	else return a.si < b.si;
+	if(a.si != b.si) return a.si > b.si;
+	else return a.ei < b.ei;
 }
 
 int main() {
-	int n = -1;
-	while(n != 0) {
-		scanf("%d", &n);
-		if(n == 0) break;
+	int n;
+	while(scanf("%d", &n), n != 0) {
 		for(int i = 1; i <= n; i++) {
 			scanf("%d%d", &tv[i].si, &tv[i].ei);
 		}
